@@ -1,0 +1,25 @@
+id,text,label,ground_truth
+1,I was charged twice for my monthly plan,billing,billing
+2,Please correct the invoice amount,billing,billing
+3,I cannot receive the password reset email,access,access
+4,My one time login code has expired,access,access
+5,Transfer to my bank is still pending,payment,payment
+6,The recipient has not received the transfer,payment,payment
+7,The app crashes when I open settings,technical,technical
+8,Notifications are not arriving on Android,technical,technical
+9,Someone tried to sign in to my account,security,security
+10,I need help after a suspicious login,security,security
+11,My card was charged for an order I cancelled,,billing
+12,Why is my tax receipt missing,,billing
+13,I forgot my password after changing phones,,access
+14,The verification link says it is invalid,,access
+15,When will the bank transfer arrive,,payment
+16,The cash withdrawal shows as pending,,payment
+17,Uploading an attachment gives an error,,technical
+18,The mobile app freezes on the payment screen,,technical
+19,Please lock my account because my device was stolen,,security
+20,There is an unknown device in my account history,,security
+21,My refund has not appeared on the card,,billing
+22,The desktop page stays blank after login,,technical
+23,Can I cancel a transfer to the wrong payee,,payment
+24,My account was accessed from another country,,security
