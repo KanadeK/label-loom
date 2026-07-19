@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "label-loom"
+version = "0.1.0"
+description = "Offline active-learning recommendations for text classification annotation."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [{name = "KanadeK"}]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+dependencies = [
+  "numpy==2.5.1",
+  "polars==1.42.1",
+  "scikit-learn==1.9.0",
+  "pydantic==2.12.4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build==1.2.1",
+  "mypy==1.18.2",
+  "pytest==8.3.2",
+  "pytest-cov==7.1.0",
+  "ruff==0.15.22",
+]
+
+[project.scripts]
+label-loom = "label_loom.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/label_loom"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+
+[tool.coverage.run]
+branch = true
+source = ["label_loom"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = ["scipy.*", "sklearn.*"]
+ignore_missing_imports = true
