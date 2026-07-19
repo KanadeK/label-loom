@@ -1,0 +1,7 @@
+id,text,predicted_label,uncertainty,diversity,score
+17,Uploading an attachment gives an error,technical,0.999948,1.0,0.999966
+16,The cash withdrawal shows as pending,payment,0.996358,0.657653,0.877811
+11,My card was charged for an order I cancelled,billing,0.987776,0.631986,0.863249
+15,When will the bank transfer arrive,payment,0.993205,0.615682,0.861072
+22,The desktop page stays blank after login,security,0.997201,0.564149,0.845633
+13,I forgot my password after changing phones,security,0.997138,0.564149,0.845592
