@@ -34,7 +34,9 @@ def main() -> int:
         subprocess.run([str(executable), "-m", "pip", "install", str(wheel)], check=True)
         subprocess.run([str(executable), "-m", "label_loom.cli", "--version"], check=True)
     checksums = "".join(
-        f"{sha256(file)}  {file.name}\n" for file in sorted(RELEASE.iterdir()) if file.is_file()
+        f"{sha256(file)}  {file.name}\n"
+        for file in sorted(RELEASE.iterdir())
+        if file.is_file() and file.name != "SHA256SUMS.txt"
     )
     (RELEASE / "SHA256SUMS.txt").write_text(checksums, encoding="utf-8")
     return 0
