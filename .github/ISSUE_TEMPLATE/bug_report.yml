@@ -1,0 +1,15 @@
+name: Bug report
+description: Report a reproducible Label Loom defect
+body:
+  - type: textarea
+    attributes:
+      label: Reproduction
+      description: Include sanitized command, input shape, expected behavior, and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment
+      description: Include OS and Python version. Do not include sensitive source text.
+    validations:
+      required: true
